@@ -6,7 +6,7 @@ default: test
 
 # bin generates the releaseable binaries for Jiractl
 bin: fmtcheck generate
-	@sh -c "'$(CURDIR)/scripts/build.sh'"
+	@JCTL_RELEASE=1 @sh -c "'$(CURDIR)/scripts/build.sh'"
 
 # dev creates binaries for testing Jiractl locally. These are put
 # into ./bin/ as well as $GOPATH/bin
@@ -28,7 +28,7 @@ cover:
 
 # generate runs `go generate` to build the dynamically generated
 # source files
-generate:
+generate: vendor
 	GOFLAGS=-mod=vendor go generate ./...
 
 fmt:
@@ -37,9 +37,12 @@ fmt:
 fmtcheck:
 	@sh -c "'$(CURDIR)/scripts/gofmtcheck.sh'"
 
+vendor:
+	go mod vendor
+
 # disallow any parallelism (-j) for Make. This is necessary since some
 # commands during the build process create temporary files that collide
 # under parallel conditions.
 .NOTPARALLEL:
 
-.PHONY: bin cover default dev fmt fmtcheck generate quickdev test-compile test testacc testrace vendor-status website website-test
+.PHONY: bin cover default dev fmt fmtcheck generate quickdev test-compile test testacc testrace vendor-status website website-test vendor

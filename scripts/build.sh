@@ -43,7 +43,7 @@ fi
 export CGO_ENABLED=0
 
 # In release mode we don't want debug information in the binary
-if [[ -n "${TF_RELEASE}" ]]; then
+if [[ -n "${JCTL_RELEASE}" ]]; then
     LD_FLAGS="-s -w"
 fi
 

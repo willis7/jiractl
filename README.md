@@ -2,6 +2,9 @@
 
 'jiractl' is short for Jira Controller.
 
+## Status
+[![Build Status](https://travis-ci.org/willis7/jiractl.svg?branch=master)](https://travis-ci.org/willis7/jiractl)
+[![codecov](https://codecov.io/gh/willis7/jiractl/branch/master/graph/badge.svg)](https://codecov.io/gh/willis7/jiractl)
 
 ## Usage
 ```

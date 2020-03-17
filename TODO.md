@@ -1,7 +1,7 @@
-* [ ] Bootstap
+* [X] Bootstap
   * [X] Makefile
-  * [ ] Travis CI
-  * [ ] Codecov
+  * [x] Travis CI
+  * [x] Codecov
 * [ ] Comment on an issue if it hasn’t been updated for 15 days
 * [ ] Change a specific field if an issue hasn’t been updated for a week
 * [ ] Comment on an issue every hour if it has a Blocker priority and has not evolved
