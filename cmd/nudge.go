@@ -92,7 +92,7 @@ func nudgeAction(cmd *cobra.Command, args []string) error {
 		fmt.Printf("%s :: %s\n", issue.Key, issue.Fields.Summary)
 
 		if !noop {
-			err = jiralib.AddComment(jiraClient, issue.Key, nudgeMsg)
+			_, err = jiralib.AddComment(jiraClient, issue.Key, nudgeMsg)
 			if err != nil {
 				fmt.Printf("Failed to add comment to: %s . ERROR: %s\n", issue.Key, err)
 			}

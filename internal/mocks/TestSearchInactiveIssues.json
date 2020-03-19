@@ -1,0 +1,322 @@
+{
+    "expand": "schema,names",
+    "startAt": 0,
+    "maxResults": 50,
+    "total": 2,
+    "issues": [
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "10004",
+            "self": "https://example.com/rest/api/2/issue/10004",
+            "key": "JIR-5",
+            "fields": {
+                "statuscategorychangedate": "2020-03-17T14:17:03.003+0000",
+                "issuetype": {
+                    "self": "https://example.com/rest/api/2/issuetype/10001",
+                    "id": "10001",
+                    "description": "Functionality or a feature expressed as a user goal.",
+                    "iconUrl": "https://example.com/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype",
+                    "name": "Story",
+                    "subtask": false,
+                    "avatarId": 10315
+                },
+                "timespent": null,
+                "project": {
+                    "self": "https://example.com/rest/api/2/project/10000",
+                    "id": "10000",
+                    "key": "JIR",
+                    "name": "jirabot",
+                    "projectTypeKey": "software",
+                    "simplified": false,
+                    "avatarUrls": {
+                        "48x48": "https://example.com/secure/projectavatar?pid=10000&avatarId=10405",
+                        "24x24": "https://example.com/secure/projectavatar?size=small&s=small&pid=10000&avatarId=10405",
+                        "16x16": "https://example.com/secure/projectavatar?size=xsmall&s=xsmall&pid=10000&avatarId=10405",
+                        "32x32": "https://example.com/secure/projectavatar?size=medium&s=medium&pid=10000&avatarId=10405"
+                    }
+                },
+                "fixVersions": [],
+                "aggregatetimespent": null,
+                "resolution": null,
+                "customfield_10027": null,
+                "customfield_10028": null,
+                "resolutiondate": null,
+                "workratio": -1,
+                "watches": {
+                    "self": "https://example.com/rest/api/2/issue/JIR-5/watchers",
+                    "watchCount": 1,
+                    "isWatching": true
+                },
+                "lastViewed": "2020-03-18T12:22:45.864+0000",
+                "created": "2020-03-17T14:16:36.129+0000",
+                "customfield_10020": null,
+                "customfield_10021": null,
+                "customfield_10022": null,
+                "priority": {
+                    "self": "https://example.com/rest/api/2/priority/3",
+                    "iconUrl": "https://example.com/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "customfield_10023": null,
+                "customfield_10024": null,
+                "customfield_10025": [],
+                "customfield_10026": null,
+                "labels": [],
+                "customfield_10016": null,
+                "customfield_10017": null,
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "PLUGIN_LICENSE_ERROR",
+                        "message": "Portfolio for Jira must be licensed for the Parent Link to be available."
+                    }
+                },
+                "customfield_10019": "0|i0000v:",
+                "aggregatetimeoriginalestimate": null,
+                "timeestimate": null,
+                "versions": [],
+                "issuelinks": [],
+                "assignee": null,
+                "updated": "2020-03-17T14:17:03.003+0000",
+                "status": {
+                    "self": "https://example.com/rest/api/2/status/10000",
+                    "description": "",
+                    "iconUrl": "https://example.com/",
+                    "name": "To Do",
+                    "id": "10000",
+                    "statusCategory": {
+                        "self": "https://example.com/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                },
+                "components": [],
+                "timeoriginalestimate": null,
+                "description": "As a user, I want to nudge the assignee to take action when the issue has not seen any update in the past 14 days so that I keep a clean backlog of only open tasks that are being worked on.",
+                "customfield_10010": null,
+                "customfield_10014": null,
+                "customfield_10015": null,
+                "customfield_10005": null,
+                "customfield_10006": null,
+                "customfield_10007": null,
+                "security": null,
+                "customfield_10008": null,
+                "aggregatetimeestimate": null,
+                "customfield_10009": null,
+                "summary": "nudge when inactive for 14 days",
+                "creator": {
+                    "self": "https://example.com/rest/api/2/user?accountId=5e5fb15da0d1e50cdebbcde8",
+                    "accountId": "5e5fb15da0d1e50cdebbcde8",
+                    "emailAddress": "example@email.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=48&s=48",
+                        "24x24": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=24&s=24",
+                        "16x16": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=16&s=16",
+                        "32x32": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=32&s=32"
+                    },
+                    "displayName": "Sion Williams",
+                    "active": true,
+                    "timeZone": "Europe/London",
+                    "accountType": "atlassian"
+                },
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://example.com/rest/api/2/user?accountId=5e5fb15da0d1e50cdebbcde8",
+                    "accountId": "5e5fb15da0d1e50cdebbcde8",
+                    "emailAddress": "example@email.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=48&s=48",
+                        "24x24": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=24&s=24",
+                        "16x16": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=16&s=16",
+                        "32x32": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=32&s=32"
+                    },
+                    "displayName": "Sion Williams",
+                    "active": true,
+                    "timeZone": "Europe/London",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10000": "{}",
+                "customfield_10001": null,
+                "customfield_10002": null,
+                "customfield_10003": null,
+                "customfield_10004": null,
+                "environment": null,
+                "duedate": null,
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://example.com/rest/api/2/issue/JIR-5/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                }
+            }
+        },
+        {
+            "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+            "id": "10003",
+            "self": "https://example.com/rest/api/2/issue/10003",
+            "key": "JIR-4",
+            "fields": {
+                "statuscategorychangedate": "2020-03-04T13:52:28.333+0000",
+                "issuetype": {
+                    "self": "https://example.com/rest/api/2/issuetype/10001",
+                    "id": "10001",
+                    "description": "Functionality or a feature expressed as a user goal.",
+                    "iconUrl": "https://example.com/secure/viewavatar?size=medium&avatarId=10315&avatarType=issuetype",
+                    "name": "Story",
+                    "subtask": false,
+                    "avatarId": 10315
+                },
+                "timespent": null,
+                "project": {
+                    "self": "https://example.com/rest/api/2/project/10000",
+                    "id": "10000",
+                    "key": "JIR",
+                    "name": "jirabot",
+                    "projectTypeKey": "software",
+                    "simplified": false,
+                    "avatarUrls": {
+                        "48x48": "https://example.com/secure/projectavatar?pid=10000&avatarId=10405",
+                        "24x24": "https://example.com/secure/projectavatar?size=small&s=small&pid=10000&avatarId=10405",
+                        "16x16": "https://example.com/secure/projectavatar?size=xsmall&s=xsmall&pid=10000&avatarId=10405",
+                        "32x32": "https://example.com/secure/projectavatar?size=medium&s=medium&pid=10000&avatarId=10405"
+                    }
+                },
+                "fixVersions": [],
+                "aggregatetimespent": null,
+                "resolution": null,
+                "customfield_10027": null,
+                "customfield_10028": null,
+                "resolutiondate": null,
+                "workratio": -1,
+                "watches": {
+                    "self": "https://example.com/rest/api/2/issue/JIR-4/watchers",
+                    "watchCount": 1,
+                    "isWatching": true
+                },
+                "lastViewed": "2020-03-18T12:22:55.728+0000",
+                "created": "2020-03-04T13:52:28.237+0000",
+                "customfield_10020": null,
+                "customfield_10021": null,
+                "customfield_10022": null,
+                "priority": {
+                    "self": "https://example.com/rest/api/2/priority/3",
+                    "iconUrl": "https://example.com/images/icons/priorities/medium.svg",
+                    "name": "Medium",
+                    "id": "3"
+                },
+                "customfield_10023": null,
+                "customfield_10024": null,
+                "customfield_10025": [],
+                "customfield_10026": null,
+                "labels": [],
+                "customfield_10016": null,
+                "customfield_10017": null,
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "PLUGIN_LICENSE_ERROR",
+                        "message": "Portfolio for Jira must be licensed for the Parent Link to be available."
+                    }
+                },
+                "customfield_10019": "0|i0000n:",
+                "aggregatetimeoriginalestimate": null,
+                "timeestimate": null,
+                "versions": [],
+                "issuelinks": [],
+                "assignee": null,
+                "updated": "2020-03-15T21:07:09.366+0000",
+                "status": {
+                    "self": "https://example.com/rest/api/2/status/10000",
+                    "description": "",
+                    "iconUrl": "https://example.com/",
+                    "name": "To Do",
+                    "id": "10000",
+                    "statusCategory": {
+                        "self": "https://example.com/rest/api/2/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                },
+                "components": [],
+                "timeoriginalestimate": null,
+                "description": null,
+                "customfield_10010": null,
+                "customfield_10014": null,
+                "customfield_10015": null,
+                "customfield_10005": null,
+                "customfield_10006": null,
+                "customfield_10007": null,
+                "security": null,
+                "customfield_10008": null,
+                "customfield_10009": null,
+                "aggregatetimeestimate": null,
+                "summary": "Story 4",
+                "creator": {
+                    "self": "https://example.com/rest/api/2/user?accountId=5e5fb15da0d1e50cdebbcde8",
+                    "accountId": "5e5fb15da0d1e50cdebbcde8",
+                    "emailAddress": "example@email.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=48&s=48",
+                        "24x24": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=24&s=24",
+                        "16x16": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=16&s=16",
+                        "32x32": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=32&s=32"
+                    },
+                    "displayName": "Sion Williams",
+                    "active": true,
+                    "timeZone": "Europe/London",
+                    "accountType": "atlassian"
+                },
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://ex/rest/api/2/user?accountId=5e5fb15da0d1e50cdebbcde8",
+                    "accountId": "5e5fb15da0d1e50cdebbcde8",
+                    "emailAddress": "example@email.com",
+                    "avatarUrls": {
+                        "48x48": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=48&s=48",
+                        "24x24": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=24&s=24",
+                        "16x16": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=16&s=16",
+                        "32x32": "https://secure.gravatar.com/avatar/515fcee796f707fc64cfade155f87761?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSW-5.png&size=32&s=32"
+                    },
+                    "displayName": "Sion Williams",
+                    "active": true,
+                    "timeZone": "Europe/London",
+                    "accountType": "atlassian"
+                },
+                "customfield_10000": "{}",
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10001": null,
+                "customfield_10002": null,
+                "customfield_10003": null,
+                "customfield_10004": null,
+                "environment": null,
+                "duedate": null,
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://example.com/rest/api/2/issue/JIR-4/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                }
+            }
+        }
+    ]
+}

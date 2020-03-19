@@ -51,11 +51,11 @@ func SearchInactiveIssues(client *jira.Client, project string, days int) ([]jira
 }
 
 // AddComment adds a comment to the issue whos issueID matches what was passed in.
-func AddComment(jiraClient *jira.Client, issueID string, body string) error {
+func AddComment(jiraClient *jira.Client, issueID string, body string) (*jira.Comment, error) {
 	c := &jira.Comment{Body: body}
-	_, resp, err := jiraClient.Issue.AddComment(issueID, c)
+	comment, resp, err := jiraClient.Issue.AddComment(issueID, c)
 	if rc := resp.StatusCode; err != nil || (rc < 200 || rc > 299) {
-		return fmt.Errorf("JIRA AddComment unsuccessful, got %s (%d)", resp.Status, resp.StatusCode)
+		return nil, fmt.Errorf("JIRA AddComment unsuccessful, got %s (%d)", resp.Status, resp.StatusCode)
 	}
-	return nil
+	return comment, nil
 }
