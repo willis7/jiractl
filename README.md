@@ -54,6 +54,7 @@ See the [Makefile](Makefile) for a complete list of commands.
 
 
 ``` bash
+$ export TESTARGS="--url=scheme://[username[:password]@]host[:port]/"
 # test runs the unit tests
 $ make test
 

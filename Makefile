@@ -6,7 +6,7 @@ default: test
 
 # bin generates the releaseable binaries for Jiractl
 bin: fmtcheck generate
-	@JCTL_RELEASE=1 @sh -c "'$(CURDIR)/scripts/build.sh'"
+	@JCTL_RELEASE=1 sh -c "'$(CURDIR)/scripts/build.sh'"
 
 # dev creates binaries for testing Jiractl locally. These are put
 # into ./bin/ as well as $GOPATH/bin
@@ -15,11 +15,11 @@ dev: fmtcheck generate
 
 # test runs the unit tests
 test: fmtcheck generate
-	go list -mod=vendor $(TEST) | xargs -t -n4 go test $(TESTARGS) -mod=vendor -timeout=2m -parallel=4
+	go test -mod=vendor $(TEST) $(TESTARGS) -v
 
 # testrace runs the race checker
 testrace: fmtcheck generate
-	go test -mod=vendor -race $(TEST) $(TESTARGS)
+	go test -mod=vendor -race $(TEST) $(TESTARGS) -v
 
 cover:
 	go test $(TEST) -coverprofile=coverage.out
@@ -45,4 +45,4 @@ vendor:
 # under parallel conditions.
 .NOTPARALLEL:
 
-.PHONY: bin cover default dev fmt fmtcheck generate quickdev test-compile test testacc testrace vendor-status website website-test vendor
+.PHONY: bin cover default dev fmt fmtcheck generate quickdev test-compile test testrace vendor

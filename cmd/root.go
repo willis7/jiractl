@@ -19,7 +19,6 @@ import (
 	"fmt"
 	"os"
 
-	jira "github.com/andygrunwald/go-jira"
 	"github.com/spf13/cobra"
 
 	homedir "github.com/mitchellh/go-homedir"
@@ -27,8 +26,8 @@ import (
 )
 
 var (
+	// Used for flags
 	cfgFile      string
-	jiraClient   *jira.Client
 	jiraURL      string
 	jiraUsername string
 	jiraPassword string
@@ -55,27 +54,19 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.jiractl.yaml)")
-	rootCmd.PersistentFlags().BoolP("dry-run", "d", false, "No operation dry run")
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.jiractl.yaml)")
+	rootCmd.PersistentFlags().BoolP("no-op", "n", false, "Dry run, no changes made")
+	rootCmd.PersistentFlags().BoolP("verbose", "v", false, "More log output")
 
 	// Bing flags with config
 	rootCmd.PersistentFlags().StringVar(&jiraURL, "url", "", "JIRA instance URL (format: scheme://[username[:password]@]host[:port]/).")
-	viper.BindPFlag("url", rootCmd.PersistentFlags().Lookup("url"))
-
 	rootCmd.PersistentFlags().StringVar(&jiraUsername, "user", "", "JIRA Username.")
-	viper.BindPFlag("user", rootCmd.PersistentFlags().Lookup("user"))
-
 	rootCmd.PersistentFlags().StringVar(&jiraPassword, "pass", "", "JIRA Password.")
+	viper.BindPFlag("url", rootCmd.PersistentFlags().Lookup("url"))
+	viper.BindPFlag("user", rootCmd.PersistentFlags().Lookup("user"))
 	viper.BindPFlag("pass", rootCmd.PersistentFlags().Lookup("pass"))
-
-	var err error
-	jiraClient, err = NewJiraClient(jiraURL, jiraUsername, jiraPassword)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
 }
 
 // initConfig reads in config file and ENV variables if set.
@@ -102,22 +93,4 @@ func initConfig() {
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("Using config file:", viper.ConfigFileUsed())
 	}
-}
-
-// NewJiraClient will return a valid JIRA api client.
-func NewJiraClient(instanceURL, username, password string) (*jira.Client, error) {
-	client, err := jira.NewClient(nil, instanceURL)
-	if err != nil {
-		return nil, fmt.Errorf("JIRA client can`t be initialized: %s", err)
-	}
-
-	// Only provide authentification if a username and password was applied
-	if len(username) > 0 && len(password) > 0 {
-		ok, err := client.Authentication.AcquireSessionCookie(username, password)
-		if ok == false || err != nil {
-			return nil, fmt.Errorf("jiractl can`t authenticate user %s against the JIRA instance %s: %s", username, instanceURL, err)
-		}
-	}
-
-	return client, nil
 }
